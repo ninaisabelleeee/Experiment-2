@@ -1,0 +1,36 @@
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	int Fibonacci, F1, F2, num;
+
+	num = 10000;
+	F1 = 0;
+	F2 = 1;
+	Fibonacci = (F1 + F2);
+	cout << F1 << ", " << F2 << ", ";
+
+		for (Fibonacci == 1; Fibonacci <= num; Fibonacci++)
+		{
+			Fibonacci = (F1 + F2);
+			F1 = F2;
+			F2 = Fibonacci;
+			cout << Fibonacci << ", ";
+
+			if (Fibonacci == 6765)
+				break;
+		}
+
+		Fibonacci = 10946;
+		cout << Fibonacci << "." << endl;
+
+	_getch();
+	return 0;
+
+}
+
