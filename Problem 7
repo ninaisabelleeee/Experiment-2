@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	int num1, num, sum;
+
+	cout << "Input a number: ";
+	cin >> num;
+
+	num1 = num;
+
+		for (num == 1; num1<= num; num++)
+		{
+			sum  = (num * (num + 1)) / 2;
+			cout << "The sum of the numbers from 1 to " << num1 << " is " << sum << "." << endl; 
+			break;
+		}
+
+	_getch();
+	return 0;
+}
+
