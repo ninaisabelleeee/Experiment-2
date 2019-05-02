@@ -1,0 +1,53 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	double V1, V2, V3, V4, V5, z;
+	int x, y;
+
+	z = 2.5;
+
+	cout << "Enter value of X: ";
+	cin >> x;
+
+	cout << "Enter value of Y: ";
+	cin >> y;
+
+	V1 = x * y * z;
+	V2 = (x + (y / z));
+	V3 = abs((x - y) / z);
+	V4 = x - (sqrt (y + z));
+	V5 = x + y + z;
+
+		switch (x)
+		{
+			case 1:
+				if (1 < y < 5)
+					cout << setw (10) << "The value of V is = " << setprecision(2) << V1 << endl;
+				else if (y > 5 || y == 5)
+					cout << setw (10) << "The value of V is = " << setprecision(2) << V2 << endl;
+				else
+					cout << setw (10) << "The value is undefined." << endl;
+				break;
+			case 2:
+				if (y < 5 || y == 5)
+					cout << setw (10) << "The value of V is = " << setprecision(2) << V3 << endl;
+				else if (y > 5)
+					cout << setw (10) << "The value of V is = " << setprecision(2) << V4 << endl;
+				else
+					cout << setw (10) << "The value is undefined." << endl;
+				break;
+			default:
+				cout << setw (10) << "The Value of V is = " << setprecision(2) << V5 << endl;
+		}
+	_getch();
+	return 0;
+}
+
+
