@@ -1,0 +1,45 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	float TotalBill, LateBill, UnpaidBalance, WaterDemandCharge, LateCharge;
+	int Gallon, Gallon1, Gallon2;
+
+	WaterDemandCharge = 35.0;
+	LateCharge = 20.0;
+	
+
+		cout << "Enter number of Gallons used in the previous month: ";
+		cin >> Gallon1;
+
+		cout << "Enter number of Gallons used in the current month: ";
+		cin >> Gallon2;
+
+		cout << "Enter Unpaid Balance: P";
+		cin >> UnpaidBalance;
+
+		Gallon = Gallon2 - Gallon1;
+		TotalBill = (Gallon * 1.10) + 35;
+		LateBill = (TotalBill + LateCharge);
+
+		{
+			if (UnpaidBalance > 0)
+				{
+					cout << "Total Bill: P" << setprecision(2) << LateBill << endl;
+				}
+			else
+				cout << "Total Bill: P" << setprecision(2) << TotalBill << endl; 
+				
+		}
+
+	_getch();
+	return 0;
+}
+
+
