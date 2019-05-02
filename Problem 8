@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	int num1, num, product;
+
+	cout << "Enter a number: ";
+	cin >> num;
+
+	cout << "Multiplication Table of " << num << ": " << endl;
+
+	num1 = 1;
+
+		for (num1 == 1; num1 <= 10; num1++)
+		{
+			product = num1 * num;
+			cout << num1 << " X " << num << " = " << product << endl;
+		}
+
+	_getch();
+	return 0;
+}
+
