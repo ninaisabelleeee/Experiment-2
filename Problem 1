@@ -1,0 +1,56 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int Hours, PackageA, AdditionalA, PackageB, AdditionalB, PackageC;
+	char Package;
+
+		cout << "Subscription Packages: " << endl;
+		cout << "Package 1: P995/mo with 10 hours of access and additional P20/hour exceeded." << endl;
+		cout << "Package 2: P1495/mo with 20 hours of access and additional P10/hour exceeded." << endl;
+		cout << "Package 3: P1995/mo with unlimited access." << endl;
+
+		cout << endl;
+
+		cout << "Enter chosen Package (enter upper case letter only): ";
+		cin >> Package;
+		cout << "Enter Hours used: ";
+		cin >> Hours;
+
+
+		PackageA = 995;
+		PackageB = 1495;
+		PackageC = 1995;
+
+		AdditionalA = PackageA + (20 * (Hours - 10));
+		AdditionalB = PackageB + (10 * (Hours - 20));
+
+		switch (Package)
+		{
+		case 'A':
+			if (Hours <= 10)
+				cout << "Total Bill: " << PackageA << endl;
+			else (Hours > 10);
+				cout << "Total Bill: " << AdditionalA << endl;
+			break;
+		case 'B':
+			if (Hours <= 20)
+				cout << "Total Bill: " << PackageB << endl;
+			else (Hours > 20);
+				cout << "Total Bill: " << AdditionalB << endl;
+			break;
+		case 'C':
+			cout << "Total Bill: " << PackageC << endl;
+		default:
+			cout << "You must choose between A,B, and C." << endl;
+		}
+
+
+	_getch();
+	return 0;
+}
+
